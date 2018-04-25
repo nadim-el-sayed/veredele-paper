@@ -1,0 +1,210 @@
+%\documentclass{letterpaper,11pt,twoside,twocolumn}
+% \documentclass[10pt, conference, letterpaper]{IEEEtran}
+% use sig alternate template
+\documentclass{sig-alternate}
+
+% \setlength{\oddsidemargin}{-0.3cm}
+% \setlength{\evensidemargin}{-0.3cm}
+% \setlength{\textwidth}{16cm}
+% \setlength{\topmargin}{-0.8cm}
+% \setlength{\textheight}{23.0cm}
+
+%\usepackage[margin=.70in]{geometry}
+
+%\pdfpagewidth=8.5in
+%\pdfpageheight=11in
+%\setlength\paperheight {11in}
+%\setlength\paperwidth {8.5in}
+%\setlength{\textwidth}{7in}
+%\setlength{\textheight}{9.25in}
+%\setlength{\oddsidemargin}{-.25in}
+%\setlength{\evensidemargin}{-.25in}
+
+
+%include our custom files
+\input{my_newcommands}
+\input{my_packages}
+
+
+% MAIN DOC
+\begin{document}
+
+	\title{VEREDELE FACDS Field Test}
+	\subtitle{Measurement of a Flexible AC-Distribution System}
+
+	\numberofauthors{4}
+	\author{
+               \alignauthor
+		Nadim EL Sayed \\
+			\affaddr{Technical University of Berlin}\\
+			\affaddr{Berlin, Germany}\\
+			\email{nadim.elsayed@dai-labor.de}
+		\alignauthor
+		Thomas H{\"u}hn \\
+	    		\affaddr{Technical University of Berlin}\\
+			\affaddr{Berlin, Germany}\\
+			\email{thomas@inet.tu-berlin.de}
+                \alignauthor
+                Benjamin Vahl \\
+			\affaddr{Technical University of Berlin}\\
+			\affaddr{Berlin, Germany}\\
+			\email{benjamin.vahl@dai-labor.de}
+		\and
+		\alignauthor
+		Stefan Venz \\
+	    		\affaddr{GT-ARC gGmbH}\\
+			\affaddr{Berlin, Germany}\\
+			\email{stefan.venz@gt-arc.com}
+		\alignauthor
+		Christian R{\"u}ster \\
+			\affaddr{A.Eberle GmbH \& Co. KG}\\
+			\affaddr{N{\"u}rnberg, Germany}\\
+			\email{christian.ruester@a-eberle.de}
+		\alignauthor
+		Fabian Haussel \\
+			\affaddr{A.Eberle GmbH \& Co. KG}\\
+			\affaddr{N{\"u}rnberg, Germany}\\
+			\email{fabian.haussel@a-eberle.de}
+		\and
+		\alignauthor
+		Alexander Novitskiy \\
+			\affaddr{TU Ilmenau}\\
+			\affaddr{Imenau, Germany}\\
+			\email{Alexander.Novitskiy@TU-Ilmenau.de}
+	}
+
+	\maketitle
+	\sloppy
+
+	\begin{abstract}
+	TBD Abstract
+	\end{abstract}
+
+	\keywords{Power quality, measurements, Test trial}
+
+	%%%
+	\section{Introduction}
+
+	%%%
+	\section{Related Work}
+	\label{s:related}
+
+	%%%
+	\section{Trial description}
+	\label{s:trial-descr} 
+
+		%%
+		\subsection{System Design Considerations}
+		\label{s:system-design}
+
+			\subsubsection{Freedom and Boundaries}
+			\label{s:freedom-boundaries}
+
+			\subsubsection{Per-Data-Packet TPC}
+			\label{s:tpc-data}
+
+			\subsubsection{MAC-Layer ACK-Packet TPC}
+			\label{s:tpc-ack}
+
+		%%
+		\subsection{TPC with Linux WiFi Systems}
+		\label{s:todays-wifi-systems}
+
+
+	%%%
+	\section{The Algorithm: Minstrel-Blues}
+	\label{s:minstrel-blues}
+
+		%%
+		\subsection{Minstrel Rate Control}
+		\label{s:minstrel-rate}
+
+		%%
+		\subsection{Blues Power Control}
+		\label{s:minstrel-blues}
+
+		%%
+		\subsection{Joint Rate and Power Control}
+		\label{s:joint-control}
+
+			%
+			\subsubsection{New Utility Function}
+			\label{s:utility-function}
+
+		%%
+		\subsection{Technical Settings}
+		\label{s:technical-settings}
+
+		%%
+		\subsection{Open Issues}
+		\label{s:open-issues}
+
+	%%%
+	%\section{Simulation Results}
+	%\label{s:simulations}
+
+	%\subsection{Simulation Set-up}
+
+	%\subsection{Validation}
+
+	%\subsection{Performance Evaluation}
+
+
+	%%%
+	\section{Performance Analysis of Minstrel-Blues}
+	\label{s:performance-analysis}
+
+		%%
+		\subsection{Measurement System}
+		\label{s:measurement-system}
+
+		%%
+		\subsection{Validation}
+		\label{s:validation}
+
+			\subsubsection{Experimental Setup}
+			
+			\subsubsection{Results}
+
+			\subsubsection{Discussion}
+
+		%%
+		\subsection{Performance Evaluation: Home-Setup}
+		\label{s:evaluation}
+
+			\subsubsection{Experimental Setup}
+
+			\subsubsection{Results}
+
+			\subsubsection{Discussion}
+
+		%%
+		\subsection{Performance Evaluation: Mesh-Setup}
+		\label{s:evaluation}
+
+			\subsubsection{Experimental Setup}
+
+			\subsubsection{Results}
+
+			\subsubsection{Discussion}
+
+		%%
+		\subsection{Summary}
+
+	%%%
+	\section{Conclusion}
+	\label{s:conclusion}
+
+
+
+       % Bibliography
+	{
+	\bibliographystyle{abbrv}
+	\small
+	\bibliography{my_references}
+	}
+
+	%\appendix
+	%\include{appendix}
+
+\end{document}
