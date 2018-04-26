@@ -29,8 +29,8 @@
 % MAIN DOC
 \begin{document}
 
-	\title{VEREDELE FACDS Field Test}
-	\subtitle{Measurement of a Flexible AC-Distribution System}
+	\title{PowQuTy}
+	\subtitle{High resolution Power Qualtity Monitoring System for Low Voltage Grids}
 
 	\numberofauthors{4}
 	\author{
@@ -83,118 +83,99 @@
 	\keywords{Power quality, measurements, Test trial}
 
 	%%%
-	\section{Introduction}
-
-	%%%
-	\section{Related Work}
-	\label{s:related}
-
-	%%%
-	\section{Trial description}
-	\label{s:trial-descr} 
-
-		%%
-		\subsection{System Design Considerations}
-		\label{s:system-design}
-
-			\subsubsection{Freedom and Boundaries}
-			\label{s:freedom-boundaries}
-
-			\subsubsection{Per-Data-Packet TPC}
-			\label{s:tpc-data}
-
-			\subsubsection{MAC-Layer ACK-Packet TPC}
-			\label{s:tpc-ack}
-
-		%%
-		\subsection{TPC with Linux WiFi Systems}
-		\label{s:todays-wifi-systems}
+	\section{Motivativation and Challenges}
+		\begin{itemize}
+			\item LB-Grid lage span (Biggest Area); no monitoring; unknown state at millisecond level
+			\item rise of prosumers and energy transition (Energiewende), Smart-Grids, Islanding (Inselbetrieb)
+			\item Challenges for any monitoring system (cost effective, resource constraints; easy installation; local storage and processing )
+			\item Edge vs. cloud data aggragation; bandwidth considerations
+			\item other requirements for LV-grid-monitoring (real-time hard / soft ?)
+		\end{itemize}
 
 
 	%%%
-	\section{The Algorithm: Minstrel-Blues}
-	\label{s:minstrel-blues}
+	\section{new Monitoring System Design}
 
 		%%
-		\subsection{Minstrel Rate Control}
-		\label{s:minstrel-rate}
+		\subsection{Hardware Setup}
+
+			\subsubsection{WeSense}
+				USB oscilloscope samples
+
+			\subsubsection{Router Plattform}
+				specs, supported architectures
+
 
 		%%
-		\subsection{Blues Power Control}
-		\label{s:minstrel-blues}
+		\subsection{Software Architecture of PowQuty}
+			\subsubsection{OpenWrt}
+				Daemon, LuCi app
+			\subsubsection{Data Formats}
+				binary, JSON, ASCII ...
+			\subsubsection{Data collection and transmission}
+				Protocols and approaches (raw, bzip, mqtt, CoAP)
+			\subsubsection{PQ-Events}
+				Handling (SLACK, E-Mail Notification)
+			\subsubsection{Linitations}
+				currently only one Wesense (no 3-phase support)
 
-		%%
-		\subsection{Joint Rate and Power Control}
-		\label{s:joint-control}
-
-			%
-			\subsubsection{New Utility Function}
-			\label{s:utility-function}
-
-		%%
-		\subsection{Technical Settings}
-		\label{s:technical-settings}
-
-		%%
-		\subsection{Open Issues}
-		\label{s:open-issues}
-
-	%%%
-	%\section{Simulation Results}
-	%\label{s:simulations}
-
-	%\subsection{Simulation Set-up}
-
-	%\subsection{Validation}
-
-	%\subsection{Performance Evaluation}
 
 
 	%%%
-	\section{Performance Analysis of Minstrel-Blues}
-	\label{s:performance-analysis}
+	\section{System Validation and Performance evaluation}
 
 		%%
-		\subsection{Measurement System}
-		\label{s:measurement-system}
+		\subsection{Certification}
+			class A certification 
 
 		%%
 		\subsection{Validation}
-		\label{s:validation}
-
-			\subsubsection{Experimental Setup}
-			
-			\subsubsection{Results}
-
-			\subsubsection{Discussion}
+			Wesene-Powquty Vs Dewesoft (Setup measurements, and results)
 
 		%%
-		\subsection{Performance Evaluation: Home-Setup}
-		\label{s:evaluation}
+		\subsection{Powqutyd Validation}
+			Resource impact (RAM, CPU, Bus ) on the different architectures (X86, MIPS, PowerPC, ARM); Tuning time.
 
-			\subsubsection{Experimental Setup}
-
-			\subsubsection{Results}
-
-			\subsubsection{Discussion}
+        %%%
+        \section{PQ-Measurement Trial}
 
 		%%
-		\subsection{Performance Evaluation: Mesh-Setup}
-		\label{s:evaluation}
+		\subsection{Experimentation setup}
+			\begin{itemize}
+				\item Mesh routers and Uplinks (Evernet)
+				\item number of nodes, timespan of the running measurements
+				\item Time Synchronization of the data (NTP)
+			\end{itemize}
+		
+		%%
+		\subsection{Measurement,  Error handling}
+			cron
+		\subsection{Measurement field trial}
+			Data volume, Throughput, opendata sources, rsync, scp, bzip, mqtt
 
-			\subsubsection{Experimental Setup}
-
-			\subsubsection{Results}
-
-			\subsubsection{Discussion}
+        %%%
+        \section{Data analysis and results}
+		
+		%%
+		\subsection{Data Validation}
+			parsing scripts ...etc.
+		
+		%%
+		\subsection{PQ-EN50160 Analysis}
+			PQ-Events occuring in the field trial
 
 		%%
-		\subsection{Summary}
+		\subsection{Solar irradiance vs. voltage distribution correlation}
+
 
 	%%%
-	\section{Conclusion}
-	\label{s:conclusion}
+	\section{Summary, Conclusion, and future work}
+	3x Wesense for three phase measurements... \\
+	more data analysis ...etc.
 
+	%%%
+	\section{Acknowledgement}
+	VEREDELE FACDS Project funded by the federal ministry for .... under grant number ....
 
 
        % Bibliography
